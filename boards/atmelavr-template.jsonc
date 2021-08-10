@@ -1,0 +1,45 @@
+//Fuses should be set manually to make sure you know what exactly happened. GUI tool is available from Kahzama.
+
+{
+  "build": {
+    "core": "Naked", //["MicroCore", "Arduino", "Naked"],
+    "extra_flags": "-DARDUINO_AVR_ATTINY13",
+    "f_cpu": "960000000L", //["9600000L", "48000000L", "12000000L"],
+    "mcu": "attiny13a",
+    "variant": "attiny13",
+    "ldscript": []
+  },
+  "hardware": {
+    "oscillator": "internal", //["internal", "external"],
+    "uart": "no_bootloader", //["no_bootloader", "uart0", "uart1"],
+    "bod": "disabled", //["disabled", "1.8V", "2.7V", "4.0V", "4.7V"],
+    "eesave": "yes", //["yes", "no"],
+    "ckout": "no", //["yes", "no"],
+    "jtagen":"no" //["yes", "no"]
+  },
+  "bootloader": {
+    "efuse": "0xFD",
+    "file": "optiboot/optiboot_atmega328.hex",
+    "hfuse": "0xDE",
+    "lock_bits": "0x0F",
+    "lfuse": "0xFF",
+    "unlock_bits": "0x3F",
+    "led_pin": "B5"
+  },
+  "debug": {
+    "simavr_target": "attiny13a"
+  },
+  "platforms": ["atmelavr"],   //兼容的platform
+  "frameworks": ["arduino"],   //可用的软件框架
+  "name": "ATtiny13A USBASP Template",
+  "upload": {
+    "extra_flags": "-B 12",    //-B is used to specify ISP clock frequency, seemingly.
+    "maximum_ram_size": 64,
+    "maximum_size": 1024,
+    "protocol": "usbasp",
+    "require_upload_port": false,
+    "speed": 19200
+  },
+  "url": "https://www.microchip.com/wwwproducts/en/ATtiny13A",
+  "vendor": "Microchip"
+}

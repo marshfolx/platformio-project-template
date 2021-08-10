@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Path>C:/Users/chris/scoop/apps/pwsh/current;C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/;C:/Program Files/Intel/Intel(R) Management Engine Components/iCLS/;C:/Windows/system32;C:/Windows;C:/Windows/System32/Wbem;C:/Windows/System32/WindowsPowerShell/v1.0/;C:/Windows/System32/OpenSSH/;C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL;C:/Program Files/Intel/Intel(R) Management Engine Components/DAL;C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT;C:/Program Files/Intel/Intel(R) Management Engine Components/IPT;C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;C:/WINDOWS/System32/WindowsPowerShell/v1.0/;C:/WINDOWS/System32/OpenSSH/;C:/Users/chris/scoop/apps/openjdk/current/bin;C:/Users/chris/scoop/apps/tcc/current/tcc;C:/Users/chris/scoop/apps/nodejs/current/bin;C:/Users/chris/scoop/apps/nodejs/current;C:/Users/chris/scoop/shims;C:/Users/chris/source/vcpkg;C:/Users/chris/AppData/Local/Microsoft/WindowsApps;C:/Users/chris/.dotnet/tools;C:/Python/Py39;C:/Python/Py39/Scripts;C:/Users/chris/.platformio/penv/Scripts</Path>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0FA9C3A8-452B-41EF-A418-9102B170F49F}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>platformio -f -c visualstudio run</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>platformio -f -c visualstudio run --target clean</NMakeCleanCommandLine>
+    <NMakePreprocessorDefinitions>PLATFORMIO=50101;ARDUINO_AVR_ATTINY13;F_CPU=9600000L;ARDUINO_ARCH_AVR;ARDUINO=10808;__AVR_ATtiny13A__</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(HOMEDRIVE)$(HOMEPATH)/source/PlatformIO/platformio-project-template/include;$(HOMEDRIVE)$(HOMEPATH)/source/PlatformIO/platformio-project-template/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr-microcore/cores/MicroCore;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr-microcore/variants/attiny13;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr-microcore/libraries/AVR_examples/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr-microcore/libraries/EEPROM/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr-microcore/libraries/Serial_examples/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr-microcore/libraries/TinySPI/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/7.3.0/include;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/7.3.0/include-fixed;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/toolchain-atmelavr/avr/include;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/tool-unity</NMakeIncludeSearchPath>
+    <NMakeReBuildCommandLine>pio project init</NMakeReBuildCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>platformio run</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>platformio run --target clean</NMakeCleanCommandLine>
+    <NMakePreprocessorDefinitions>PLATFORMIO=50101;ARDUINO_AVR_ATTINY13;F_CPU=9600000L;ARDUINO_ARCH_AVR;ARDUINO=10808;__AVR_ATtiny13A__</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(HOMEDRIVE)$(HOMEPATH)/source/PlatformIO/platformio-project-template/include;$(HOMEDRIVE)$(HOMEPATH)/source/PlatformIO/platformio-project-template/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr-microcore/cores/MicroCore;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr-microcore/variants/attiny13;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr-microcore/libraries/AVR_examples/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr-microcore/libraries/EEPROM/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr-microcore/libraries/Serial_examples/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr-microcore/libraries/TinySPI/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/7.3.0/include;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/7.3.0/include-fixed;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/toolchain-atmelavr/avr/include;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/tool-unity</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="boards\atmelavr-template.jsonc" />
+    <None Include="boards\attiny13a-naked.json" />
+    <None Include="config-extra\platformio_extra.ini" />
+    <None Include="platformio.ini" />
+    <None Include="platformio.template.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src/main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
