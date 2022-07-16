@@ -1,0 +1,28 @@
+{
+  "build": {
+    "core": "naked",
+    "extra_flags": "-D_AVR_ATTINY13A",
+    "mcu": "attiny13a",
+    "f_cpu": "9600000L",
+    "variant": "attiny13"
+  },
+  "hardware": {
+    "oscillator": "internal",
+    "uart": "no_bootloader"
+  },
+  "debug": {
+    "simavr_target": "attiny13a"
+  },
+  "platforms": ["atmelavr"],
+  "frameworks": [],
+  "name": "ATtiny13A-NAKED",
+  "upload": {
+    "extra_flags": "-P usb -B12",
+    "maximum_ram_size": 64,
+    "maximum_size": 1024,
+    "protocol": "usbasp",
+    "require_upload_port": false
+  },
+  "url": "https://www.microchip.com/wwwproducts/en/ATtiny13A",
+  "vendor": "Microchip"
+}
